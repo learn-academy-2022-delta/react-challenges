@@ -1,0 +1,57 @@
+<!-- REACT -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+
+  </head>
+  <body>
+
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+      class HelloReact extends React.Component{
+        render(){
+          return(
+            <>
+            <h1>Hello React!</h1>
+            <h2>This is just a test</h2>
+            <h3>But this is kinda cool and fun</h3>
+            <HelloDelta />
+            <AnotherTest />
+            </>
+          )
+        }
+      }
+
+      class HelloDelta extends React.Component{
+        render(){
+          return(
+            <>
+            <p>Hello Delta!</p>
+            </>
+          )
+        }
+      }
+
+        class AnotherTest extends React.Component{
+            render(){
+            return(
+                <>
+                <p>This is another paragraph just to make sure that i am gettig the hang of this and can keep going. This is kind of like a variable that is being called on later</p>
+                </>
+            )
+            }
+        }
+
+      const domContainer = document.querySelector('#react-container');
+      ReactDOM.render(<HelloReact />, domContainer);
+
+    </script>
+  </body>
+</html>
