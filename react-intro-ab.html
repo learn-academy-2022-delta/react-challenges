@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+
+  </head>
+  <body>
+
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+      class HelloReact extends React.Component{
+        render(){
+          return(
+            <>
+            <h1>Hello React!</h1>
+            <h2>Testing adding multiple headers to one node</h2>
+            <p> insert cat picture here with img </p> 
+            <HelloDelta/> 
+            <HelloDelta/> 
+            <HelloDelta/> 
+            <InsertCatPicture/>
+            </>
+            // COMPONENT BELOW IS INSTANTIATED ABOVE INSIDE THE FIRST COMPONENT
+          )
+        }
+      }
+
+
+
+      //<!-- NEW REACT COMPONENT CLASS-->
+
+      class HelloDelta extends React.Component{
+        render(){
+            return(
+                <>
+                <p> Hello Delta class. It is fun to learn React with you. </p>
+                </>
+            )
+        }
+      }
+
+
+      // <!-- ANOTHER NEW REACT COMPONENT-->
+
+      class InsertCatPicture extends React.Component{
+        render(){
+            return(
+                <>
+                <li>Reusable components make life easier.</li>
+                <li> Virtual DOM makes React fast.</li>
+                <li></li>
+                </>
+            )
+        }
+      }
+
+
+      const domContainer = document.querySelector('#react-container');
+      ReactDOM.render(<HelloReact />, domContainer);
+
+
+
+    </script>
+  </body>
+</html>
