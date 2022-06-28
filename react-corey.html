@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Intro to React</title>
+
+</head>
+<body>
+
+  <div id="react-container"></div>
+
+  <script type="text/babel">
+    class App extends React.Component{
+      render(){
+        return(
+          <>
+          <header>Delta Cohort 2022</header>
+          <ul>
+                <li>Steven</li>
+                <li>Will</li>
+                <li>Trevor</li>
+                <li>Ahmed</li>
+                <li>Jojo</li>
+                <li>David</li>
+                <li>David</li>
+                <li>Gene</li>
+                <li>Samuel</li>
+                <li>James</li>
+                <li>Sean</li>
+                <li>Vanessa</li>
+                <li>Pua</li>
+                <li>Nicole</li>
+                <li>Luis</li>
+                <li>Alvin</li>
+                <li>Corey</li>
+                <li>Alex</li>
+                <li>Ricky</li>
+                <li>William</li>
+                <li>Leo</li>
+            </ul>
+            <footer>Corey Arnold</footer>
+          </>
+        )
+      }
+    }
+    const domContainer = document.querySelector('#react-container')
+    ReactDOM.render(<App />, domContainer)
+  </script>
+</body>
+</html>
