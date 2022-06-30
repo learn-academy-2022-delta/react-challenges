@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './App.css';
 
 class App extends Component{
   constructor(props) {
@@ -25,9 +25,17 @@ render(){
   return(
     <>
       <button onClick={this.rolledDice}>dice roll</button>
-      <h1>Dice</h1>
+      <h1> Numbers rolled</h1>
       <h1>{this.state.numbersRolled}</h1>
+      
+      <h1>Dice</h1>
+      <div className = "square" >
+      <center> 
       <h2 >{this.state.currentRoll}</h2>
+      </center>
+      
+
+      </div>
     </>
     )
   }
