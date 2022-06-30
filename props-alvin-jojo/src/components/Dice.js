@@ -7,7 +7,15 @@ class Dice extends Component {
         <>
       <div>Dice</div>
       <h2>{this.props.number}</h2>
-      <button onClick={this.props.clickMethod}>Click Box to Roll</button>
+      <button 
+        onClick={this.props.clickMethod}
+        // numbersList={this.numbersRolledFunction}
+        
+        >
+        Click Box to Roll</button>
+        <ul>
+            {this.props.numbersRolled}
+        </ul>
       </>
     )
   }
