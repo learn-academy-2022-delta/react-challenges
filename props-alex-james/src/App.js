@@ -1,41 +1,38 @@
 import React, { Component } from 'react'
 import './App.css';
+import CurrentRoll from './components/CurrentRoll';
+import NumbersRolled from './components/NumbersRolled';
 
 class App extends Component{
   constructor(props) {
     super(props)
     this.state = {
-      diceNumbersArray: [1, 2, 3, 4, 5, 6,],
-      numbersRolled: []
+      numbersRolled: [],
+      currentRoll: 0
     }
   }
 
   rolledDice = () => {
-    let currentRoll = Math.floor(Math.random() * (1, 6) + 1)
-    this.state.numbersRolled.push(currentRoll)
-    //this.setState({ numbersRolled: numbersRolled.push(currentRoll) })
-    // let numbersRolled1 = []
-   // numbersRolled1.push(currentRoll)
-    console.log(currentRoll)
-    console.log(this.state.numbersRolled)
-    this.setState({ currentRoll: currentRoll})
+    let roll = Math.floor(Math.random() * (1, 6) + 1)
+    this.state.numbersRolled.push(roll)
+    this.setState({ currentRoll: roll})
   }
 
 render(){
   return(
     <>
-      <button onClick={this.rolledDice}>dice roll</button>
-      <h1> Numbers rolled</h1>
-      <h1>{this.state.numbersRolled}</h1>
+    <CurrentRoll name={this.state.currentRoll}/>
+    <NumbersRolled rolled={this.state.numbersRolled} dice={this.rolledDice}/>
       
-      <h1>Dice</h1>
-      <div className = "square" >
-      <center> 
-      <h2 >{this.state.currentRoll}</h2>
-      </center>
       
 
-      </div>
+
+      {/* <button onClick={this.rolledDice}>dice roll</button> */}
+      {/* <h1> Numbers rolled</h1> */}
+      {/* <h1>{this.state.numbersRolled}</h1> */}
+      {/* <h1>Dice</h1> */}
+      {/* <div className = "square" > */}
+      {/* <h2 >{this.state.currentRoll}</h2> */}
     </>
     )
   }
