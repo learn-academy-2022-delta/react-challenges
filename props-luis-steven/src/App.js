@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 import Dice from "./Dice"
+import "./App.css"
 
 class App extends Component {
  constructor (props) {
     super(props)
     this.state = {
     diceRoll: [],
-    rollCount: 0
+    rollCount: ""
   }
  }
 
  
  handleClick = () => {
 
-  let randomCount = Math.floor(Math.random() * 6 ) + 1 
-  console.log(randomCount) 
+  let randomCount = Math.floor(Math.random() * 6 )
+  // console.log(randomCount) 
   // this.setState({ diceRoll: this.state.diceRoll [rollCount]})
-  this.setState({diceRoll: [this.state.diceRoll, randomCount],rollCount: this.state.rollCount + 1
+  this.setState({diceRoll: [this.state.diceRoll, randomCount],rollCount: this.state.rollCount
  })
  }
  render() {
@@ -31,11 +32,6 @@ class App extends Component {
     )
   }
 }
-
-
-
-
-
 
 
 
