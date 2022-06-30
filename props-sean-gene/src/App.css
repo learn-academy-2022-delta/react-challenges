@@ -1,0 +1,7 @@
+.itembox {
+  border: 10px solid black;
+  width: 30px;
+  height: 50px;
+  padding: 50px;
+  margin: 20px;
+}
